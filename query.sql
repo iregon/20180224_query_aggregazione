@@ -23,6 +23,10 @@ WHERE c.Classe = "5B"
     
 /*determinare il numero di valutazioni comprese tra 6 e 10 della materia matematica*/
 
+SELECT COUNT(*)
+FROM valutazioni
+WHERE Voto BETWEEN 6 AND 10
+	AND Materia = "MATEMATICA"
 
 /*determinare il numero di classi della specializzazione informatica*/
 
