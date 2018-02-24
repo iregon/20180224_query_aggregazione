@@ -10,3 +10,18 @@ FROM insegnano i, professori p
 WHERE p.Nome = "Massimo"
 	AND p.Cognome = "Palombo"
     AND p.CodiceProfessore = i.CodiceProfessore
+
+/*individuare il voto massimo e minimo delle valutazioni di informatica della classe 5BI*/
+
+SELECT MAX(v.Voto) as "votomax",  MIN(v.Voto) as "votomin"
+FROM valutazioni v, classi c, studenti s
+WHERE c.Classe = "5B"
+    AND c.Specializzazione = "inf"
+    AND c.CodiceClasse = s.CodiceClasse
+    AND s.Matricola = v.Matricola
+    AND v.Materia = "INFORMATICA"
+
+/*determinare il numero di valutazioni comprese tra 6 e 10 della materia matematica*/
+
+
+/*determinare il numero di classi della specializzazione informatica*/
