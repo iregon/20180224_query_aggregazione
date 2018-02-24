@@ -17,11 +17,15 @@ SELECT MAX(v.Voto) as "votomax",  MIN(v.Voto) as "votomin"
 FROM valutazioni v, classi c, studenti s
 WHERE c.Classe = "5B"
     AND c.Specializzazione = "inf"
+    AND v.Materia = "INFORMATICA"
     AND c.CodiceClasse = s.CodiceClasse
     AND s.Matricola = v.Matricola
-    AND v.Materia = "INFORMATICA"
-
+    
 /*determinare il numero di valutazioni comprese tra 6 e 10 della materia matematica*/
 
 
 /*determinare il numero di classi della specializzazione informatica*/
+
+SELECT COUNT(*)
+FROM classi
+WHERE Specializzazione = "inf"
